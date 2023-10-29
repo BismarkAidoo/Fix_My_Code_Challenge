@@ -35,5 +35,9 @@ if __name__ == '__main__':
         print("Example: ./0-fizzbuzz.py 89")
         sys.exit(1)
 
-    number = int(sys.argv[1])
-    fizzbuzz(number)
+    try:
+        number = int(sys.argv[1])
+        fizzbuzz(number)
+    except ValueError:
+        print("Invalid input. Please provide a valid number.")
+        sys.exit(1)
